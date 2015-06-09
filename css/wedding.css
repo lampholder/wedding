@@ -86,6 +86,16 @@ header {
 }
 
 header .container {
+    padding-top: 200px;
+    padding-bottom: 50px;
+}
+
+section#accommodation, section#gifts {
+    background: #4B77BE;
+}
+
+section#accommodation .container, section#gifts .container {
+    color: #fff;
     padding-top: 100px;
     padding-bottom: 50px;
 }
@@ -191,16 +201,30 @@ section h2 {
     font-size: 3em;
 }
 
-section.success {
+section.rsvp {
     color: #fff;
     background: #4B77BE;
 }
 
-section.success a,
-section.success a:hover,
-section.success a:focus,
-section.success a:active,
-section.success a.active {
+section.schedule a,
+section.schedule a:hover,
+section.schedule a:focus,
+section.schedule a:active,
+section.schedule a.active {
+    outline: 0;
+    color: #2c3e50;
+}
+
+section.schedule {
+    color: #fff;
+    background: #4B77BE;
+}
+
+section.schedule a,
+section.schedule a:hover,
+section.schedule a:focus,
+section.schedule a:active,
+section.schedule a.active {
     outline: 0;
     color: #2c3e50;
 }
@@ -290,11 +314,15 @@ section.success a.active {
     background: #fff;
 }
 
+.form-control {
+    color: #EEEEEE;
+}
+
 .floating-label-form-group {
     position: relative;
     margin-bottom: 0;
     padding-bottom: .5em;
-    border-bottom: 1px solid #2c3e50;
+    border-bottom: 1px solid #EEEEEE;
 }
 
 .floating-label-form-group input,
@@ -343,7 +371,7 @@ section.success a.active {
 }
 
 form .row:first-child .floating-label-form-group {
-    border-top: 1px solid #2c3e50;
+    border-top: 1px solid #EEEEEE;
 }
 
 footer {
@@ -470,7 +498,21 @@ footer .footer-below {
     opacity: 0;
 }
 
-section#contact {
-    background: #EEEEEE;    
+section#rsvp {
+    background: #4B77BE;
+}
 
+section#travel {
+    background: #EEEEEE;    
+}
+
+
+/* Some stuff that overtly overrides the bootstrap default styling */
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+   background-color: #6E95D3;
+}
+
+.toms-form .form-control {
+    color: black;
 }

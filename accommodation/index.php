@@ -1,3 +1,14 @@
+<?php
+$file = file_get_contents("http://www.cmsonline.rhul.ac.uk/Shortbreakslive/BnB/Step1.aspx");
+$regex = "/name=\"__(.*)\" id=\"__.*\" value=\"(.*)\"/";
+
+$hidden_fields = "";
+if (preg_match_all($regex, $file, $matches_out)){
+    foreach ($matches_out[0] as $value) {
+        $hidden_fields .= "    <input type=\"hidden\" " . $value . ">\n";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,13 +23,13 @@
     <title>Cesca & Tom are getting married!</title>
 
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/wedding.css" rel="stylesheet">
+    <link href="/css/wedding.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
@@ -54,22 +65,22 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#location">Location</a>
+                        <a href="/#location">Location</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#schedule">Schedule</a>
+                        <a href="/#schedule">Schedule</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#travel">Travel</a>
+                        <a href="/#travel">Travel</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#rsvp">RSVP</a>
+                        <a href="/#rsvp">RSVP</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="accommodation/#accommodation">Accomodation</a>
+                        <a href="#accommodation">Accomodation</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="gifts">Gifts</a>
+                        <a href="/gifts">Gifts</a>
                     </li>
                 </ul>
             </div>
@@ -78,155 +89,95 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <img class="img-responsive" src="img/polaroid.png" alt="">
-                    <div class="intro-text">
-                        <span class="name">Cesca &amp; Tom are getting married!</span>
-                        <hr class="star-light">
-                        <span class="datetime">3 o'clock, 5th September, 2015</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <section id="location">
-        <div class="container">
-            <div class="panel panel-default" id="location">
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-lg-12 text-center">
-                            <h2>Where?</h2>
-                            <hr class="star-primary">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <p>We're getting married in <a href="https://www.google.co.uk/maps/place/51%C2%B025'30.9%22N+0%C2%B034'02.7%22W/@51.425389,-0.567159,3a,75y,27.79h,85.25t/data=!3m5!1e1!3m3!1s7Xl2QfzxcXk6KUfn7LgNQQ!2e0!3e5!4m2!3m1!1s0x0:0x0!6m1!1e1" target="_blank">The Chapel</a> at Royal Holloway, University of London.</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4975.567832237697!2d-0.5639737999999834!3d51.4253959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48767755f3ce74c9%3A0xd04339084bd84568!2sRoyal+Holloway!5e0!3m2!1sen!2suk!4v1433687841072" width="99%" height="440px" style="border:1px solid black"></iframe>
-                        </div>
-                    </div>
-                    <br>
-                </div>
-            </div>
-            <br>
-            <br>
-        </div>
-    </section>
-
-    <!-- Scedule Section -->
-    <section class="schedule" id="schedule">
+    <section id="accommodation">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Schedule</h2>
+                    <h2>Accommodation</h2>
                     <hr class="star-light">
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <table class="table table-striped table-bordered">
-                        <thead>
-                            <tr><th>Time</th><th>Location</th><th>Activity</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>14.30</td><td>Chapel</td><td>Guest arrive</td></tr>
-                            <tr><td>14.45</td><td>Chapel</td><td>Bride arrival!</td></tr>
-                            <tr><td>15.00 - 15.45</td><td>Chapel</td><td>Ceremony</td></tr>
-                            <tr><td>15.45 - 16.00</td><td>North Tower</td><td>Move to the South Quad</td></tr>
-                            <tr><td>16.00 - 17.30</td><td>South Quad</td><td>Drinks Reception and Photographs...</td></tr>
-                            <tr><td>17.30 - 17.45</td><td>Founder's Dining Hall</td><td>Seating for food</td></tr>
-                            <tr><td>18.00 - 20.00</td><td>Founder's Dining Hall</td><td>Food service</td></tr>
-                            <tr><td>20.00 - 20.30</td><td>Founder's Dining Hall</td><td>Speeches</td></tr>
-                            <tr><td>20.30</td><td>Founder's Dining Hall</td><td>Cutting of the cake</td></tr>
-                            <tr><td>20.45</td><td>Founder's Dining Hall</td><td>First dance :S</td></tr>
-                            <tr><td>21.00</td><td>Founder's Dining Hall</td><td>Evening buffet served (chips)</td></tr>
-                            <tr><td>00.30 - 00.45</td><td>Founder's Dining Hall</td><td>Last orders</td></tr>
-                            <tr><td>01.00</td><td>Founder's Dining Hall</td><td>It's all over, everybody go to bed :D</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Travel Section -->
-    <section class="travel" id="travel">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Travel</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                <p>Travel information will go in here! (Just the same stuff that's on your invites incase that gets lost).</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Contact Section -->
-    <section class="rsvp" id="rsvp">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>RSVP</h2>
-                    <hr class="star-light">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                    <form name="sentMessage" id="contactForm" action="mailto:webform@cesca-and-tom.com" novalidate>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Name</label>
-                                <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Email Address</label>
-                                <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Phone Number</label>
-                                <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Message</label>
-                                <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <p>Royal Holloway's website for booking accommodation is somewhat ugly and highly confusing. I've tried to simplify the most frustrating aspects of by building a simpler form here. Enter your desired accommodation details and click 'Find Accommodation' - you'll still end up on Royal Holloway's site to make the final booking.</p>
                         <br>
-                        <div id="success"></div>
-                        <div class="row">
-                            <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-success btn-lg">Send</button>
-                            </div>
-                        </div>
-                    </form>
+                    </div>
                 </div>
+                <form class="simple-form form-horizontal toms-form" method="post" action="http://www.cmsonline.rhul.ac.uk/Shortbreakslive/BnB/Step1.aspx">
+                    <?php echo $hidden_fields; ?>
+                    <input type="hidden" name="ctl00$MainContent$AreasDropDown1$ddlAreas" value="0">
+                    <input type="hidden" name="ctl00$MainContent$BedroomTypesControl1$ddlBedroomTypes" value="0">
+
+                    <div class="form-group">
+                      <label class="control-label col-sm-3" for="ctl00$MainContent$BasicDatePicker1$TextBox">Arriving on:</label>
+                      <div class="col-sm-7">
+                        <select name="ctl00$MainContent$BasicDatePicker1$TextBox" class="form-control">
+                          <option value="4-Sep-2015" >Friday 4-Sep-2015</option>
+                          <option value="5-Sep-2015" selected>Saturday 5-Sep-2015</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="control-label col-sm-3" for="ctl00$MainContent$txtPromotionCode">Type of accommodation:</label>
+                      <div class="col-sm-7">
+                        <select name="ctl00$MainContent$txtPromotionCode" class="form-control">
+                          <option value="ROB2015" selected>Student flats - Gower</option>
+                          <option value="">The Hub</option>
+                       </select>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-sm-3" for="ctl00$MainContent$ddlNights$ddlNumber">Number of nights:</label>
+                    <div class="col-sm-7">
+                      <select name="ctl00$MainContent$ddlNights$ddlNumber" class="form-control">
+                        <option value="1" selected>1</option>
+                        <option value="2" >2</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-sm-3" for="ctl00$MainContent$ddlPeople$ddlNumber">Number of people:</label>
+                    <div class="col-sm-7">
+                      <select name="ctl00$MainContent$ddlPeople$ddlNumber" class="form-control">
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                      </select>
+                    </div>
+                  </div>
+
+                <div class="form-group">
+                  <label class="control-label col-sm-3" for="ctl00$MainContent$ddlRoomsOld$ddlNumber">Number of rooms:</label>
+                  <div class="col-sm-7">
+                    <select name="ctl00$MainContent$ddlRoomsOld$ddlNumber" class="form-control">
+                      <option value="1" selected>1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                    </select>
+                  </div>
+                </div>
+
+                <input type="submit" class="col-sm-3 col-sm-offset-7 btn btn-success" name="ctl00$MainContent$btnSubmit" value="Find Accommodation">
+
+            </form>
             </div>
         </div>
     </section>
