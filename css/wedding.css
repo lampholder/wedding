@@ -201,7 +201,7 @@ section h2 {
     font-size: 3em;
 }
 
-section.rsvp {
+section#menu {
     color: #fff;
     background: #4B77BE;
 }
@@ -315,14 +315,15 @@ section.schedule a.active {
 }
 
 .form-control {
-    color: #EEEEEE;
+    color: #2c3e50;
+    background: #EEEEEE; /*#4B77BE; */
 }
 
 .floating-label-form-group {
     position: relative;
     margin-bottom: 0;
     padding-bottom: .5em;
-    border-bottom: 1px solid #EEEEEE;
+    border-bottom: 1px solid #2c3e50;
 }
 
 .floating-label-form-group input,
@@ -371,7 +372,7 @@ section.schedule a.active {
 }
 
 form .row:first-child .floating-label-form-group {
-    border-top: 1px solid #EEEEEE;
+    border-top: 1px solid #2c3e50;
 }
 
 footer {
@@ -499,7 +500,7 @@ footer .footer-below {
 }
 
 section#rsvp {
-    background: #4B77BE;
+    background: #EEEEEE;    
 }
 
 section#travel {

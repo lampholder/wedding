@@ -55,7 +55,7 @@ if (preg_match_all($regex, $file, $matches_out)){
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#page-top">Cesca & Tom</a>
+                <a class="navbar-brand" href="/">Cesca & Tom</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -74,10 +74,13 @@ if (preg_match_all($regex, $file, $matches_out)){
                         <a href="/#travel">Travel</a>
                     </li>
                     <li class="page-scroll">
+                        <a href="/#menu">Menu</a>
+                    </li>
+                    <li class="page-scroll">
                         <a href="/#rsvp">RSVP</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#accommodation">Accomodation</a>
+                        <a href="#accommodation">Accommodation</a>
                     </li>
                     <li class="page-scroll">
                         <a href="/gifts">Gifts</a>
@@ -98,7 +101,9 @@ if (preg_match_all($regex, $file, $matches_out)){
                 </div>
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
-                        <p>Royal Holloway's website for booking accommodation is somewhat ugly and highly confusing. I've tried to simplify the most frustrating aspects of by building a simpler form here. Enter your desired accommodation details and click 'Find Accommodation' - you'll still end up on Royal Holloway's site to make the final booking.</p>
+                        <p><em>N.B. Accommodation booking in the student accommodation will become available on July 1st.</em>If you try to book before then, Royal Holloway's site will say that nothing is available.</p>
+                        <p><a href="http://www.cmsonline.rhul.ac.uk/Shortbreakslive/BnB/Step1.aspx">Royal Holloway's website</a> for booking accommodation is somewhat ugly and highly confusing. I've tried to simplify the most frustrating aspects of by building a simpler form here.</p>
+                        <p>Enter your desired accommodation details and click 'Find Accommodation' - you'll still end up on Royal Holloway's site to make the final booking.</p>
                         <br>
                     </div>
                 </div>
@@ -151,12 +156,14 @@ if (preg_match_all($regex, $file, $matches_out)){
                         <option value="8">8</option>
                         <option value="9">9</option>
                         <option value="10">10</option>
+                        <!--
                         <option value="11">11</option>
                         <option value="12">12</option>
                         <option value="13">13</option>
                         <option value="14">14</option>
                         <option value="15">15</option>
                         <option value="16">16</option>
+                        -->
                       </select>
                     </div>
                   </div>
@@ -170,7 +177,6 @@ if (preg_match_all($regex, $file, $matches_out)){
                       <option value="3">3</option>
                       <option value="4">4</option>
                       <option value="5">5</option>
-                      <option value="6">6</option>
                     </select>
                   </div>
                 </div>
@@ -221,7 +227,7 @@ if (preg_match_all($regex, $file, $matches_out)){
                         <div class="modal-body">
                             <h2>Project Title</h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="">
+                            <img src="/img/portfolio/cabin.png" class="img-responsive img-centered" alt="">
                             <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
                             <ul class="list-inline item-details">
                                 <li>Client:
@@ -258,7 +264,7 @@ if (preg_match_all($regex, $file, $matches_out)){
                         <div class="modal-body">
                             <h2>Project Title</h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/cake.png" class="img-responsive img-centered" alt="">
+                            <img src="/img/portfolio/cake.png" class="img-responsive img-centered" alt="">
                             <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
                             <ul class="list-inline item-details">
                                 <li>Client:
@@ -295,7 +301,7 @@ if (preg_match_all($regex, $file, $matches_out)){
                         <div class="modal-body">
                             <h2>Project Title</h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/circus.png" class="img-responsive img-centered" alt="">
+                            <img src="/img/portfolio/circus.png" class="img-responsive img-centered" alt="">
                             <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
                             <ul class="list-inline item-details">
                                 <li>Client:
@@ -332,7 +338,7 @@ if (preg_match_all($regex, $file, $matches_out)){
                         <div class="modal-body">
                             <h2>Project Title</h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/game.png" class="img-responsive img-centered" alt="">
+                            <img src="/img/portfolio/game.png" class="img-responsive img-centered" alt="">
                             <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
                             <ul class="list-inline item-details">
                                 <li>Client:

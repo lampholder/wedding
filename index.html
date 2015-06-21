@@ -32,6 +32,7 @@
 </head>
 
 <body id="page-top" class="index">
+<img src="http://l2.3cu.eu/images/wedding.gif">
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -44,7 +45,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#page-top">Cesca & Tom</a>
+                <a class="navbar-brand" href="#">Cesca & Tom</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -63,10 +64,13 @@
                         <a href="#travel">Travel</a>
                     </li>
                     <li class="page-scroll">
+                        <a href="#menu">Menu</a>
+                    </li>
+                    <li class="page-scroll">
                         <a href="#rsvp">RSVP</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="accommodation/#accommodation">Accomodation</a>
+                        <a href="accommodation/">Accommodation</a>
                     </li>
                     <li class="page-scroll">
                         <a href="gifts">Gifts</a>
@@ -138,19 +142,17 @@
                             <tr><th>Time</th><th>Location</th><th>Activity</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td>14.30</td><td>Chapel</td><td>Guest arrive</td></tr>
-                            <tr><td>14.45</td><td>Chapel</td><td>Bride arrival!</td></tr>
+                            <tr><td>14.30</td><td>Chapel</td><td>Guests arrive</td></tr>
                             <tr><td>15.00 - 15.45</td><td>Chapel</td><td>Ceremony</td></tr>
-                            <tr><td>15.45 - 16.00</td><td>North Tower</td><td>Move to the South Quad</td></tr>
-                            <tr><td>16.00 - 17.30</td><td>South Quad</td><td>Drinks Reception and Photographs...</td></tr>
-                            <tr><td>17.30 - 17.45</td><td>Founder's Dining Hall</td><td>Seating for food</td></tr>
-                            <tr><td>18.00 - 20.00</td><td>Founder's Dining Hall</td><td>Food service</td></tr>
+                            <tr><td>16.00 - 17.30</td><td>South Quad</td><td>Drinks Reception and Photographs</td></tr>
+                            <tr><td>17.30 - 17.45</td><td>Founder's Dining Hall</td><td>Seating for meal</td></tr>
+                            <tr><td>18.00 - 20.00</td><td>Founder's Dining Hall</td><td>Food is served</td></tr>
                             <tr><td>20.00 - 20.30</td><td>Founder's Dining Hall</td><td>Speeches</td></tr>
                             <tr><td>20.30</td><td>Founder's Dining Hall</td><td>Cutting of the cake</td></tr>
                             <tr><td>20.45</td><td>Founder's Dining Hall</td><td>First dance :S</td></tr>
-                            <tr><td>21.00</td><td>Founder's Dining Hall</td><td>Evening buffet served (chips)</td></tr>
-                            <tr><td>00.30 - 00.45</td><td>Founder's Dining Hall</td><td>Last orders</td></tr>
-                            <tr><td>01.00</td><td>Founder's Dining Hall</td><td>It's all over, everybody go to bed :D</td></tr>
+                            <tr><td>21.00</td><td>Founder's Dining Hall</td><td>Cones of chips, tea & cake</td></tr>
+                            <tr><td>00.30 - 00.45</td><td>Founder's Dining Hall</td><td>Last orders at the bar</td></tr>
+                            <tr><td>01.00</td><td>Founder's Dining Hall</td><td>It's all over; everybody go to bed :D</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -169,12 +171,35 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                <p>Travel information will go in here! (Just the same stuff that's on your invites incase that gets lost).</p>
+                <p>Travel information will go in here! (Just the same stuff that's on your invites incase that gets lost.)</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Menu</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h3>Starter</h3>
+                    <p>Grilled halloumi, spinach & toasted seed salad (with crunchy fennel)
+                    <h3>Main</h3>
+                    <p>Rosemary polenta with griddled Mediterranean vegetables, borlotti beans and herb vinaigrette</p>
+                    <p><em>OR</em></p>
+                    <p>Steamed fillet of salmon with baby leeks and crushed new potatoes served with a lemon and chive butter sauce</p>
+                    <h3>Dessert</h3>
+                    <p>Normandy Apple Tart - Caramelised apples on a puff pastry base served warm with clotted cream and ground hazelnut crumb</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Contact Section -->
     <section class="rsvp" id="rsvp">
@@ -182,14 +207,14 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>RSVP</h2>
-                    <hr class="star-light">
+                    <hr class="star-primary">
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
                     <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                    <form name="sentMessage" id="contactForm" action="mailto:webform@cesca-and-tom.com" novalidate>
+                    <form name="sentMessage" id="contactForm" action="/form.php" method="POST" novalidate>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Name</label>
@@ -213,8 +238,8 @@
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Message</label>
-                                <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                <label>Message and menu choices</label>
+                                <textarea rows="5" class="form-control" placeholder="Message and menu choices" id="message" required data-validation-required-message="Please enter a message."></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
