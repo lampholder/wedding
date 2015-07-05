@@ -1,4 +1,5 @@
 <?php
+ini_set('default_socket_timeout', 15);
 $file = file_get_contents("http://www.cmsonline.rhul.ac.uk/Shortbreakslive/BnB/Step1.aspx");
 $regex = "/name=\"__(.*)\" id=\"__.*\" value=\"(.*)\"/";
 
@@ -8,6 +9,8 @@ if (preg_match_all($regex, $file, $matches_out)){
         $hidden_fields .= "    <input type=\"hidden\" " . $value . ">\n";
     }
 }
+
+$hidden_fields = trim($hidden_fields);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -99,9 +102,11 @@ if (preg_match_all($regex, $file, $matches_out)){
                     <h2>Accommodation</h2>
                     <hr class="star-light">
                 </div>
+                <?php if(!empty($hidden_fields)): ?>
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
-                        <p><em>N.B. Accommodation booking in the student accommodation will become available on July 1st.</em>If you try to book before then, Royal Holloway's site will say that nothing is available.</p>
+                        <p><em>N.B. Accommodation booking in the student accommodation IS STILL NOT WORKING. </em></p>
+                        <p>Royal Holloway are working to fix the problem. If you try to book before it's been fixed, Royal Holloway's site will say that nothing is available - apologies for this continued inconvenience.</p>
                         <p><a href="http://www.cmsonline.rhul.ac.uk/Shortbreakslive/BnB/Step1.aspx">Royal Holloway's website</a> for booking accommodation is somewhat ugly and highly confusing. I've tried to simplify the most frustrating aspects of by building a simpler form here.</p>
                         <p>Enter your desired accommodation details and click 'Find Accommodation' - you'll still end up on Royal Holloway's site to make the final booking.</p>
                         <br>
@@ -185,6 +190,14 @@ if (preg_match_all($regex, $file, $matches_out)){
 
             </form>
             </div>
+            <?php else : ?>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <p>It looks like Royal Holloway's accommodation-booking page is currently down - sorry about that. Please try again later.</p>
+                    <?php mail("lampholder@gmail.com", "Somebody is trying to book accommodation but RH is broken", "", "From: errors@cesca-and-tom.com\r\n"); ?>
+                </div>
+            </div>
+            <?php endif; ?>
         </div>
     </section>
 
