@@ -105,8 +105,8 @@ $hidden_fields = trim($hidden_fields);
                 <?php if(!empty($hidden_fields)): ?>
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
-                        <p><em>N.B. Accommodation booking in the student accommodation IS STILL NOT WORKING. </em></p>
-                        <p>Royal Holloway are working to fix the problem. If you try to book before it's been fixed, Royal Holloway's site will say that nothing is available - apologies for this continued inconvenience.</p>
+                        <p><em>ARE YOU BOOKING ONE NIGHT?</em> There is a discount for booking via the web - please use the form below to book your accommodation.</p>
+                        <p><em>ARE YOU BOOKING TWO NIGHTS?</em> There is a discount available for booking two nights, but the Royal Hollway website isn't applying this discount correctly. If you want to book for two nights with the discount, you'll have to book over the phone on <a href="tel:01784276190">01784276190</a>.</p>
                         <p><a href="http://www.cmsonline.rhul.ac.uk/Shortbreakslive/BnB/Step1.aspx">Royal Holloway's website</a> for booking accommodation is somewhat ugly and highly confusing. I've tried to simplify the most frustrating aspects of by building a simpler form here.</p>
                         <p>Enter your desired accommodation details and click 'Find Accommodation' - you'll still end up on Royal Holloway's site to make the final booking.</p>
                         <br>
@@ -120,7 +120,7 @@ $hidden_fields = trim($hidden_fields);
                     <div class="form-group">
                       <label class="control-label col-sm-3" for="ctl00$MainContent$BasicDatePicker1$TextBox">Arriving on:</label>
                       <div class="col-sm-7">
-                        <select name="ctl00$MainContent$BasicDatePicker1$TextBox" class="form-control">
+                        <select name="ctl00$MainContent$BasicDatePicker1$TextBox" class="form-control" disabled>
                           <option value="4-Sep-2015" >Friday 4-Sep-2015</option>
                           <option value="5-Sep-2015" selected>Saturday 5-Sep-2015</option>
                         </select>
@@ -131,7 +131,7 @@ $hidden_fields = trim($hidden_fields);
                       <label class="control-label col-sm-3" for="ctl00$MainContent$txtPromotionCode">Type of accommodation:</label>
                       <div class="col-sm-7">
                         <select name="ctl00$MainContent$txtPromotionCode" class="form-control">
-                          <option value="ROB2015" selected>Student flats - Gower</option>
+                          <option value="ROB2015" selected>Student flats - Gowar</option>
                           <option value="">The Hub</option>
                        </select>
                       </div>
@@ -140,7 +140,7 @@ $hidden_fields = trim($hidden_fields);
                   <div class="form-group">
                     <label class="control-label col-sm-3" for="ctl00$MainContent$ddlNights$ddlNumber">Number of nights:</label>
                     <div class="col-sm-7">
-                      <select name="ctl00$MainContent$ddlNights$ddlNumber" class="form-control">
+                      <select name="ctl00$MainContent$ddlNights$ddlNumber" class="form-control" disabled>
                         <option value="1" selected>1</option>
                         <option value="2" >2</option>
                       </select>
